@@ -1,0 +1,27 @@
+{
+  "name": "Takeover",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "icons" : {
+    "128": "images/glg.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["platform.js"]
+  }],
+  "web_accessible_resources": [
+    "platform.js.map",
+    "all"
+  ],
+  "permissions": [
+    "storage",
+    "background",
+    "identity",
+    "pushMessaging",
+    "tabs",
+    "notifications",
+    "http://*/",
+    "https://*/"
+  ]
+}

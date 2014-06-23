@@ -1,0 +1,23 @@
+{
+  "name": "takeover.chrome",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "polymer-build watch . jsrc/ build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glg/takeover.chrome.git"
+  },
+  "author": "Will Ballard <wballard@mailframe.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glg/takeover.chrome/issues"
+  },
+  "homepage": "https://github.com/glg/takeover.chrome",
+  "devDependencies": {
+    "glg-toolkit": "",
+    "polymer-tools": "0.0.0"
+  }
+}
