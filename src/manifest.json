@@ -8,10 +8,17 @@
   },
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
-    "js": ["platform.js"]
+    "js": ["takeover.js"]
   }],
   "web_accessible_resources": [
+    "platform.js",
     "platform.js.map",
+    "takeover.html",
+    "polymer.html",
+    "layout.html",
+    "polymer.js",
+    "polymer.js.map",
+    "glg-toolkit.html",
     "all"
   ],
   "permissions": [
