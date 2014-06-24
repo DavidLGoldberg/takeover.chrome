@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/glg/takeover.chrome",
   "devDependencies": {
-    "glg-toolkit": "",
-    "polymer-tools": "0.0.0"
+    "polymer": "git://github.com/custom-elements/polymer",
+    "polymer": "git://github.com/custom-elements/polymer-tools"
   }
 }

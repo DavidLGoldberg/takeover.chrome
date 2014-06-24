@@ -13,6 +13,7 @@
   "web_accessible_resources": [
     "platform.js",
     "platform.js.map",
+    "platform_injector.js",
     "takeover.html",
     "polymer.html",
     "layout.html",
