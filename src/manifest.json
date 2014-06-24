@@ -14,13 +14,10 @@
     "platform.js",
     "platform.js.map",
     "platform_injector.js",
-    "takeover.html",
     "polymer.html",
     "layout.html",
     "polymer.js",
-    "polymer.js.map",
-    "glg-toolkit.html",
-    "all"
+    "polymer.js.map"
   ],
   "permissions": [
     "storage",
