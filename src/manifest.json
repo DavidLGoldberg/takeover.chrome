@@ -8,16 +8,16 @@
   },
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
-    "js": ["takeover.js"]
+    "js": ["takeover.litcoffee"]
   }],
   "web_accessible_resources": [
-    "platform.js",
-    "platform.js.map",
-    "platform_injector.js",
-    "polymer.html",
-    "layout.html",
-    "polymer.js",
-    "polymer.js.map"
+    "takeover.js",
+    "polymer/platform.js",
+    "polymer/platform.js.map",
+    "polymer/polymer.html",
+    "polymer/layout.html",
+    "polymer/polymer.js",
+    "polymer/polymer.js.map"
   ],
   "permissions": [
     "storage",

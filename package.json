@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "polymer-build watch . jsrc/ build/"
+    "postinstall": "polymer-build --copy-polymer src/ build/",
+    "test": "polymer-build --copy-polymer watch . src/ build/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,6 @@
   "homepage": "https://github.com/glg/takeover.chrome",
   "devDependencies": {
     "polymer": "git://github.com/custom-elements/polymer",
-    "polymer": "git://github.com/custom-elements/polymer-tools"
+    "polymer-build": "^0.0.5"
   }
 }
