@@ -12,6 +12,12 @@ injection process.
 
 ##Event Handlers
 
+      hello: ->
+        @$.client.server.fire 'gettakeovers'
+
+      takeovers: (evt, detail) ->
+        new Function(detail.code).call window
+
 ##Polymer Lifecycle
 
       created: ->
