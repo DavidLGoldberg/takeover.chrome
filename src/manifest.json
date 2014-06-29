@@ -12,6 +12,7 @@
   }],
   "web_accessible_resources": [
     "takeover.js",
+    "takeover-app.html",
     "polymer/platform.js",
     "polymer/platform.js.map",
     "polymer/polymer.html",

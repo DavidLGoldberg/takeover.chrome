@@ -20,5 +20,8 @@
   "devDependencies": {
     "polymer": "git://github.com/custom-elements/polymer",
     "polymer-build": "^0.0.5"
+  },
+  "dependencies": {
+    "core-custom-event-client": "git://github.com/custom-elements/core-custom-event-client"
   }
 }

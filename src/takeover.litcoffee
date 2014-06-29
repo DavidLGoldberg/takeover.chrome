@@ -11,6 +11,7 @@ of polymer, as the `getURL` call will not be available once in page.
       injector.setAttribute('src', chrome.extension.getURL('takeover.js'))
       injector.setAttribute('platform', chrome.extension.getURL('polymer/platform.js'))
       injector.setAttribute('polymer', chrome.extension.getURL('polymer/polymer.html'))
+      injector.setAttribute('takeover', chrome.extension.getURL('takeover-app.html'))
       document.querySelector('head').appendChild(injector)
 
 ## Stage 2
@@ -31,6 +32,13 @@ Now in the page, detect if Polymer is available and inject polymer.
         polymer.setAttribute('href', injector.getAttribute('polymer'))
         document.querySelector('head').appendChild(polymer)
 
+## Stage 3
+This is a followon to stage 2.
+When there is polymer, inject the takeover.
+
+      document.addEventListener 'polymer-ready', ->
+        console.log 'go polymer!'
+        injector = document.querySelector('script[takeover]')
         takeover = document.createElement('link')
         takeover.setAttribute('rel', 'import')
         takeover.setAttribute('href', injector.getAttribute('takeover'))
