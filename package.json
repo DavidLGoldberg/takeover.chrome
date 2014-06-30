@@ -22,6 +22,9 @@
     "polymer-build": "^0.0.5"
   },
   "dependencies": {
-    "core-custom-event-client": "git://github.com/custom-elements/core-custom-event-client"
+    "bonzo": "^2.0.0",
+    "core-custom-event-client": "git://github.com/custom-elements/core-custom-event-client",
+    "ui-sparkline": "git://github.com/custom-elements/ui-sparkline",
+    "ui-tooltip": "git://github.com/custom-elements/ui-tooltip"
   }
 }
