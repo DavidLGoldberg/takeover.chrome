@@ -34,15 +34,13 @@ Now in the page, detect if Polymer is available and inject polymer.
 
 ## Stage 3
 This is a followon to stage 2.
-When there is polymer, inject the takeover.
+When there is polymer, inject the takeover by importing the polymer element
+that is our `takeover-app`.
 
       document.addEventListener 'polymer-ready', ->
-        console.log 'go polymer!'
         injector = document.querySelector('script[takeover]')
-        takeover = document.createElement('link')
-        takeover.setAttribute('rel', 'import')
-        takeover.setAttribute('href', injector.getAttribute('takeover'))
-        document.querySelector('head').appendChild(takeover)
+        Polymer.import [injector.getAttribute('takeover')], ->
+          console.log 'taken over'
 
 ## Header Errors
 The Polymer loader likes to be able to deal with redirects, but it can't deal
