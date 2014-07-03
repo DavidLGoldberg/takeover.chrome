@@ -25,6 +25,7 @@
     "async": "^0.9.0",
     "bonzo": "^2.0.0",
     "core-custom-event-client": "git://github.com/custom-elements/core-custom-event-client",
+    "glg-current-user": "git://github.com/custom-elements/glg-current-user",
     "lodash": "^2.4.1",
     "ui-sparkline": "git://github.com/custom-elements/ui-sparkline",
     "ui-tooltip": "git://github.com/custom-elements/ui-tooltip"
