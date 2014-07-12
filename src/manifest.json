@@ -8,9 +8,10 @@
   },
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
-    "js": ["takeover.litcoffee"]
+    "js": ["takeover.litcoffee", "xhr.litcoffee"]
   }],
   "web_accessible_resources": [
+    "xhr.js",
     "takeover.js",
     "takeover-app.html",
     "polymer/platform.js",

@@ -41,18 +41,3 @@ that is our `takeover-app`.
         injector = document.querySelector('script[takeover]')
         Polymer.import [injector.getAttribute('takeover')], ->
           console.log 'taken over'
-
-## Header Errors
-The Polymer loader likes to be able to deal with redirects, but it can't deal
-with the lack of headers coming from Chrome extensions.
-
-    real_getResponseHeader = XMLHttpRequest.prototype.getResponseHeader
-    XMLHttpRequest::getResponseHeader = (header) ->
-      try
-        headers = this.getAllResponseHeaders()
-        if (headers.indexOf("Location") >= 0)
-          return real_getResponseHeader.call(this, header)
-        else
-          return undefined
-      catch e
-        return undefined
