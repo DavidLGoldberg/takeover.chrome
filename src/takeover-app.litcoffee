@@ -48,7 +48,7 @@ of that script code and a run with our buddy `Function`.
 When we know an email address, run takeovers if they are loaded.
 
       emailChanged: ->
-        new Function(@takeovers.code)(@email) if @takeovers?tacode and @email
+        new Function(@takeovers.code)(@email) if @takeovers?.code and @email
 
 ##Methods
 
