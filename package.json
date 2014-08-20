@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "polymer-build --copy-polymer src/ build/",
-    "test": "polymer-build --copy-polymer --filewatch watch ./src src/ build/"
+    "postinstall": "make",
+    "test": "make"
   },
   "repository": {
     "type": "git",

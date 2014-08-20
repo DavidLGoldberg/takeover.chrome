@@ -1,7 +1,9 @@
-.PHONY: build
+.PHONY: build test
 
 build:
-	([ -d build ] && rm -rf build) || true
-	mkdir build
-	cp -R src/* build/
-	cp node_modules/polymer/* build/
+	polymer-build src/ build/
+	[ -d build/polymer ] || mkdir build/polymer
+	cp node_modules/polymer/* build/polymer
+
+test: build
+	polymer-build watch ./src src/ build/
