@@ -13,8 +13,8 @@ with the lack of headers coming from Chrome extensions.
       real_getResponseHeader = XMLHttpRequest.prototype.getResponseHeader
       request::getResponseHeader = (header) ->
         try
-          headers = this.getAllResponseHeaders()
-          if (headers.indexOf("Location") >= 0)
+          headers = this.getAllResponseHeaders()?.toLowerCase()
+          if (headers.indexOf(header?.toLowerCase()) >= 0)
             return real_getResponseHeader.call(this, header)
           else
             return undefined
