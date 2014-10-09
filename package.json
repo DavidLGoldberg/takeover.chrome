@@ -19,7 +19,7 @@
   "homepage": "https://github.com/glg/takeover.chrome",
   "devDependencies": {
     "polymer": "git://github.com/custom-elements/polymer",
-    "polymer-build": "^0.0.5"
+    "polymer-build": "git://github.com/custom-elements/polymer-tools"
   },
   "dependencies": {
     "async": "^0.9.0",
