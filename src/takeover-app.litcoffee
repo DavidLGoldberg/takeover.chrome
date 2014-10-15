@@ -15,6 +15,7 @@ When we get new takeovers, set up to run them by importing all the provided
 imports.
 
       takeoversChanged: ->
+        return unless @takeovers.imports
         waterfall = @takeovers.imports.map (i) =>
           (callback) ->
             element = document.createElement 'takeover-import'
@@ -60,6 +61,8 @@ When we know an email address, run takeovers if they are loaded.
         evt.stopPropagation()
 
       onTakeovers: (evt, detail) ->
+        return unless detail?.imports?.join('') isnt @takeovers?.imports?.join('') or
+          detail?.code isnt @takeovers?.code
         @takeovers = detail
         evt.stopPropagation()
 
