@@ -19,7 +19,8 @@ imports.
           (callback) ->
             element = document.createElement 'takeover-import'
             element.innerHTML = i
-            Polymer.importElements element, callback
+            Polymer.importElements element
+            callback()
 
 Ahh, asynchonicity. Either the user or the takeovers can come in before the
 other -- and we need both. I'm not bothering with a promise for just two things,
