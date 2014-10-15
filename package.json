@@ -1,8 +1,6 @@
 {
   "name": "takeover.chrome",
-  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "postinstall": "make",
     "test": "make"
@@ -18,7 +16,7 @@
   },
   "homepage": "https://github.com/glg/takeover.chrome",
   "devDependencies": {
-    "polymer": "git://github.com/custom-elements/polymer#b9c78bfcfebca80d6832f5e2382e1ae5e5e33285",
+    "polymer": "git://github.com/custom-elements/polymer",
     "polymer-build": "git://github.com/custom-elements/polymer-tools"
   },
   "dependencies": {
