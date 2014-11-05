@@ -15,8 +15,6 @@
     "xhr.js",
     "takeover.js",
     "takeover-app.html",
-    "polymer/platform.js",
-    "polymer/platform.js.map",
     "polymer/polymer.html",
     "polymer/layout.html",
     "polymer/polymer.js",
