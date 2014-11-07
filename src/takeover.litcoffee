@@ -1,5 +1,10 @@
 This content script is multiple stage.
 
+    injectTakeover = ->
+      injector = document.querySelector('script[takeover]')
+      Polymer.import [injector.getAttribute('takeover')], ->
+        console.log 'taken over'
+
 ## Stage 1
 Inject itself into a running we page as a content script. Note that this
 injects the compiled 'as js' version of this script, along with the location
@@ -19,6 +24,7 @@ Now in the page, detect if Polymer is available and inject polymer.
     if not chrome?.extension
       if Platform?
         console.log 'Polymer present'
+        injectTakeover()
       else
         console.log('Polymer injecting')
         injector = document.querySelector('script[takeover]')
@@ -34,6 +40,7 @@ When there is polymer, inject the takeover by importing the polymer element
 that is our `takeover-app`.
 
       document.addEventListener 'polymer-ready', ->
-        injector = document.querySelector('script[takeover]')
-        Polymer.import [injector.getAttribute('takeover')], ->
-          console.log 'taken over'
+        # NOTE: The 'polymer-ready' event will have *already* been fired
+        # by the time the extension runs if polymer was *already* present so
+        # we also call injectTakeover() above.
+        injectTakeover()
