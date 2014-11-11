@@ -29,7 +29,9 @@ that -- and the takeovers can and will change on line so a promise's single fire
 on satisfaction isn't a good fit.
 
         waterfall.push (callback) =>
-          new Function(@takeovers.code)(@email) if @takeovers.code and @email
+          console.log 'eval the take over code using user as an input'
+          for code in @takeovers.codes
+            new Function(code)(@email) if @email
           callback()
 
 Now all the polymer elements are dynamically imported, but still aren't either
